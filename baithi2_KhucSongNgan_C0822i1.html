@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let n = +prompt("Nhập vào độ dài của mảng");
+    for ( let i = 0; i < n; i++) {
+        array[i] = +prompt(" Nhập giá trị các phần tử của mảng là một số nguyên")
+    }
+    let x = +prompt(" Nhập vào số nguyên x");
+    let index = +prompt(" Nhập vào chỉ số index");
+    let newArray = [];
+    let newArray1 = array.slice(index, array.length -1);
+    let newArray2 = array.slice(0,index-1);
+    function insertNumbertoArray(x,index) {
+        if (index<0 || index >array.length) {
+            newArray = array;
+        } else {
+         newArray1 = newArray1.push(x);
+         newArray = newArray1.concat(newArray2);
+        }
+        return newArray;
+    }
+    document.write(insertNumbertoArray(x,index));
+</script>
+</body>
+</html>

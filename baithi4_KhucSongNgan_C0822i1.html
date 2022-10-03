@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myRectangle" width="600" height="450"></canvas>
+<script>
+  function Rectangle(x,y,width,height,color) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.color = color;
+
+    this.render = function () {
+      ctx = document.getElementById("myRectangle").getContext("2d");
+      ctx.fillRect(this.x, this.y, this.width, this.height, this.color);
+    }
+  }
+  let rectangle = new Rectangle(20,20,60,30, "red");
+  rectangle.render()
+</script>
+</body>
+</html>

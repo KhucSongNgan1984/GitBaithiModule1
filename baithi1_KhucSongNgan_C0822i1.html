@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n = +prompt("Nhập vào độ dài của mảng điểm");
+  let array = [];
+  for ( let i = 0; i < n; i++ ) {
+    array[i] = +prompt("Nhập vào giá trị các phần tử của mảng");
+  };
+
+  let sum = 0;
+  let avg = 0;
+  function findAvg(array) {
+      for (let i = 0; i < array.length; i++) {
+              sum += array[i]
+          }
+          avg = sum / array.length;
+          return avg;
+  };
+  document.write(findAvg(array));
+
+</script>
+</body>
+</html>
